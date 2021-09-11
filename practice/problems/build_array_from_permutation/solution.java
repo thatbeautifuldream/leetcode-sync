@@ -1,8 +1,10 @@
 class Solution {
     public int[] buildArray(int[] nums) {
         int[] res = new int[nums.length];
-        for(int i = 0; i<nums.length; i++) {
-            res[i] = nums[nums[i]];
+        int i = nums.length - 1;
+        while(i >= 0) {
+            res[nums.length - i - 1] = nums[nums[nums.length - i - 1]];
+            i--;
         }
         return res;
     }
